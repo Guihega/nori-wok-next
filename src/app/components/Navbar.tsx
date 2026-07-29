@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import {
   AnimatePresence,
   motion,
@@ -221,11 +222,12 @@ export default function Navbar() {
             className="group flex min-h-11 items-center gap-3 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-chili focus-visible:ring-offset-2 focus-visible:ring-offset-rice dark:focus-visible:ring-wasabi dark:focus-visible:ring-offset-[#101612]"
             aria-label="Nori Wok, volver al inicio"
           >
-            <img
+            <Image
               src="/icons/logo.svg"
               alt=""
-              width="42"
-              height="42"
+              width={42}
+              height={42}
+              priority
               className={`transition-all duration-300 motion-reduce:transition-none ${
                 scrolled
                   ? "h-9 w-9"
