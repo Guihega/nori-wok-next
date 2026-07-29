@@ -133,9 +133,10 @@ export default function ServiceHighlights() {
             {/* Mensaje editorial */}
             <div className="relative flex flex-col justify-between p-7 sm:p-9 lg:min-h-[390px] lg:p-10 xl:p-12">
               <div>
-                <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.07] px-3.5 py-2 text-[10px] font-black uppercase tracking-[0.2em] text-wasabi">
+                <div className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/[0.1] px-3.5 py-2 text-[10px] font-black uppercase tracking-[0.2em] text-white">
                   <Flame
                     size={14}
+                    className="text-wasabi"
                     aria-hidden="true"
                   />
 
@@ -152,7 +153,7 @@ export default function ServiceHighlights() {
                   </span>
                 </h2>
 
-                <p className="mt-5 max-w-md text-sm leading-7 text-white/60 sm:text-base">
+                <p className="mt-5 max-w-md text-sm leading-7 text-white/85 sm:text-base">
                   Una experiencia pensada para
                   elegir rápido, recibir atención
                   directa y disfrutar cada platillo
@@ -239,7 +240,7 @@ export default function ServiceHighlights() {
                         aria-hidden="true"
                       />
 
-                      <span className="absolute right-6 top-6 text-[11px] font-black tracking-[0.18em] text-white/25">
+                      <span className="absolute right-6 top-6 text-[11px] font-black tracking-[0.18em] text-white/75">
                         {item.number}
                       </span>
 
@@ -258,11 +259,11 @@ export default function ServiceHighlights() {
                           {item.title}
                         </h3>
 
-                        <p className="mt-1 text-sm font-bold text-white/75">
+                        <p className="mt-1 text-sm font-bold text-white/90">
                           {item.description}
                         </p>
 
-                        <p className="mt-4 text-xs leading-5 text-white/40">
+                        <p className="mt-4 text-xs leading-5 text-white/75">
                           {item.detail}
                         </p>
                       </div>

@@ -73,13 +73,13 @@ export default function Footer() {
 
               <span className="text-lg font-black tracking-[0.13em]">
                 NORI{" "}
-                <span className="text-chili">
+                <span className="text-[#ff6b6b]">
                   WOK
                 </span>
               </span>
             </a>
 
-            <p className="mt-5 max-w-sm text-sm leading-7 text-white/52">
+            <p className="mt-5 max-w-sm text-sm leading-7 text-white/80">
               Comida oriental preparada al momento, con una carta
               clara y atención directa para pedir sin complicaciones.
             </p>
@@ -118,10 +118,10 @@ export default function Footer() {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="group inline-flex min-h-10 items-center gap-2 rounded-lg py-2 text-sm font-bold text-white/62 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-wasabi motion-reduce:transition-none"
+                    className="group inline-flex min-h-10 items-center gap-2 rounded-lg py-2 text-sm font-bold text-white/80 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-wasabi motion-reduce:transition-none"
                   >
                     <span
-                      className="h-1.5 w-1.5 rounded-full bg-white/18 transition-colors group-hover:bg-wasabi"
+                      className="h-1.5 w-1.5 rounded-full bg-white/45 transition-colors group-hover:bg-wasabi"
                       aria-hidden="true"
                     />
                     {link.label}
@@ -142,7 +142,7 @@ export default function Footer() {
                 href={siteConfig.mapUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="group flex min-h-14 items-start gap-4 rounded-[1.2rem] border border-white/[0.07] bg-white/[0.035] p-4 transition-colors hover:bg-white/[0.055] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-wasabi motion-reduce:transition-none"
+                className="group flex min-h-14 items-start gap-4 rounded-[1.2rem] border border-white/[0.14] bg-white/[0.055] p-4 transition-colors hover:bg-white/[0.085] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-wasabi motion-reduce:transition-none"
               >
                 <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-chili/15 text-chili">
                   <MapPin
@@ -156,20 +156,20 @@ export default function Footer() {
                     Ubicación
                   </strong>
 
-                  <span className="mt-1 block text-xs leading-5 text-white/45">
+                  <span className="mt-1 block text-xs leading-5 text-white/75">
                     {siteConfig.address}
                   </span>
                 </span>
 
                 <ArrowUpRight
                   size={16}
-                  className="ml-auto mt-1 shrink-0 text-white/25 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-wasabi motion-reduce:transition-none"
+                  className="ml-auto mt-1 shrink-0 text-white/60 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-wasabi motion-reduce:transition-none"
                   aria-hidden="true"
                 />
               </a>
 
               <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
-                <div className="flex min-h-14 items-start gap-3 rounded-[1.2rem] border border-white/[0.07] bg-white/[0.035] p-4">
+                <div className="flex min-h-14 items-start gap-3 rounded-[1.2rem] border border-white/[0.14] bg-white/[0.055] p-4">
                   <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-gold/15 text-gold">
                     <Clock3
                       size={17}
@@ -182,7 +182,7 @@ export default function Footer() {
                       Horario
                     </strong>
 
-                    <span className="mt-1 block text-[11px] leading-5 text-white/42">
+                    <span className="mt-1 block text-[11px] leading-5 text-white/75">
                       {siteConfig.schedule.weekdays}
                       <br />
                       {siteConfig.schedule.sunday}
@@ -192,7 +192,7 @@ export default function Footer() {
 
                 <a
                   href={`mailto:${siteConfig.email}`}
-                  className="group flex min-h-14 items-start gap-3 rounded-[1.2rem] border border-white/[0.07] bg-white/[0.035] p-4 transition-colors hover:bg-white/[0.055] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-wasabi motion-reduce:transition-none"
+                  className="group flex min-h-14 items-start gap-3 rounded-[1.2rem] border border-white/[0.14] bg-white/[0.055] p-4 transition-colors hover:bg-white/[0.085] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-wasabi motion-reduce:transition-none"
                 >
                   <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-white/[0.07] text-white">
                     <Mail
@@ -206,7 +206,7 @@ export default function Footer() {
                       Correo
                     </strong>
 
-                    <span className="mt-1 block truncate text-[11px] leading-5 text-white/42 group-hover:text-white/65">
+                    <span className="mt-1 block truncate text-[11px] leading-5 text-white/75 group-hover:text-white">
                       {siteConfig.email}
                     </span>
                   </span>
@@ -218,12 +218,12 @@ export default function Footer() {
 
         {/* Barra inferior */}
         <div className="mt-12 flex flex-col gap-5 border-t border-white/[0.07] pt-6 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-xs text-white/35">
+          <p className="text-xs text-white/65">
             © {currentYear} {siteConfig.name}. Todos los derechos
             reservados.
           </p>
 
-          <div className="flex flex-wrap items-center gap-x-5 gap-y-3 text-xs font-bold text-white/45">
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-3 text-xs font-bold text-white/75">
             <Link
               href="/aviso-de-privacidad/"
               className="rounded-md transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-wasabi"

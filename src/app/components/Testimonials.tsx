@@ -38,7 +38,8 @@ function Rating() {
   return (
     <div
       className="flex items-center gap-1 text-gold"
-      aria-label="Cinco de cinco estrellas"
+      role="img"
+      aria-label="Calificación: cinco de cinco estrellas"
     >
       {Array.from({ length: 5 }).map((_, index) => (
         <Star

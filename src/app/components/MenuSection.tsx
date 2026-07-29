@@ -198,7 +198,7 @@ function FeaturedCard({
               {item.name}
             </h3>
 
-            <p className="mt-5 max-w-lg text-sm leading-7 text-white/65 sm:text-base">
+            <p className="mt-5 max-w-lg text-sm leading-7 text-white/85 sm:text-base">
               {item.description}
             </p>
           </div>
@@ -265,7 +265,7 @@ function SupportingCard(props: CardProps) {
             {item.name}
           </h3>
 
-          <p className="mt-3 text-sm leading-6 text-ink/60 dark:text-white/60">
+          <p className="mt-3 text-sm leading-6 text-ink/75 dark:text-white/75">
             {item.description}
           </p>
         </div>
@@ -328,7 +328,7 @@ function RegularCard(props: CardProps) {
           </strong>
         </div>
 
-        <p className="mt-3 min-h-[72px] text-sm leading-6 text-ink/60 dark:text-white/60">
+        <p className="mt-3 min-h-[72px] text-sm leading-6 text-ink/75 dark:text-white/75">
           {item.description}
         </p>
 
@@ -475,7 +475,7 @@ export default function MenuSection() {
           </div>
 
           <div className="lg:justify-self-end">
-            <p className="max-w-xl text-base leading-8 text-ink/65 dark:text-white/65">
+            <p className="max-w-xl text-base leading-8 text-ink/75 dark:text-white/75">
               Platillos claros, porciones honestas y
               combinaciones pensadas para pedir rápido.
               Personaliza según disponibilidad y confirma
@@ -515,7 +515,7 @@ export default function MenuSection() {
                   className={`relative isolate inline-flex min-h-11 items-center gap-2 overflow-hidden rounded-full px-4 text-sm font-black transition-colors motion-reduce:transition-none sm:px-5 ${
                     isActive
                       ? "text-white dark:text-nori"
-                      : "text-ink/65 hover:text-ink dark:text-white/65 dark:hover:text-white"
+                      : "text-ink/80 hover:text-ink dark:text-white/75 dark:hover:text-white"
                   }`}
                   aria-pressed={isActive}
                 >
@@ -533,10 +533,10 @@ export default function MenuSection() {
 
                   <span>{item.label}</span>
                   <span
-                    className={`flex min-h-5 min-w-5 items-center justify-center rounded-full px-1.5 text-[10px] ${
+                    className={`flex min-h-5 min-w-5 items-center justify-center rounded-full px-1.5 text-[11px] font-black ${
                       isActive
-                        ? "bg-white/15 text-white dark:bg-nori/10 dark:text-nori"
-                        : "bg-ink/[0.06] text-ink/45 dark:bg-white/10 dark:text-white/45"
+                        ? "bg-white/25 text-white dark:bg-nori/20 dark:text-nori"
+                        : "bg-ink/[0.1] text-ink/75 dark:bg-white/15 dark:text-white/75"
                     }`}
                   >
                     {categoryCounts[item.value]}

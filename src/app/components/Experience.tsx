@@ -119,8 +119,8 @@ export default function Experience() {
               ease: "easeOut",
             }}
           >
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.06] px-4 py-2 text-[10px] font-black uppercase tracking-[0.22em] text-wasabi">
-              <Flame size={14} aria-hidden="true" />
+            <div className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/[0.1] px-4 py-2 text-[10px] font-black uppercase tracking-[0.22em] text-white">
+              <Flame size={14} className="text-wasabi" aria-hidden="true" />
               Nuestra diferencia
             </div>
 
@@ -159,20 +159,20 @@ export default function Experience() {
             }}
             className="max-w-2xl xl:justify-self-end"
           >
-            <p className="text-base leading-8 text-white/65 sm:text-lg">
+            <p className="text-base leading-8 text-white/85 sm:text-lg">
               Diseñamos una experiencia corta y clara: eliges,
               confirmas y recibes comida preparada al momento,
               sin sacrificar sabor, textura ni consistencia.
             </p>
 
-            <div className="mt-6 flex flex-wrap gap-3 text-xs font-black uppercase tracking-[0.13em] text-white/45">
-              <span className="rounded-full border border-white/10 px-3 py-2">
+            <div className="mt-6 flex flex-wrap gap-3 text-xs font-black uppercase tracking-[0.13em] text-white/85">
+              <span className="rounded-full border border-white/25 bg-white/[0.06] px-3 py-2">
                 Carta enfocada
               </span>
-              <span className="rounded-full border border-white/10 px-3 py-2">
+              <span className="rounded-full border border-white/25 bg-white/[0.06] px-3 py-2">
                 Atención directa
               </span>
-              <span className="rounded-full border border-white/10 px-3 py-2">
+              <span className="rounded-full border border-white/25 bg-white/[0.06] px-3 py-2">
                 Preparación real
               </span>
             </div>
@@ -296,7 +296,7 @@ export default function Experience() {
                   <strong className="block text-sm font-black">
                     Hecho al fuego
                   </strong>
-                  <span className="text-xs text-ink/55">
+                  <span className="text-xs text-ink/75">
                     No recalentamos: cocinamos.
                   </span>
                 </div>
@@ -389,7 +389,7 @@ export default function Experience() {
                           className={`relative z-10 flex h-14 w-14 items-center justify-center rounded-2xl transition-colors duration-300 motion-reduce:transition-none ${
                             isActive
                               ? "bg-wasabi text-nori"
-                              : "bg-white/[0.06] text-white/50"
+                              : "bg-white/[0.1] text-white/85"
                           }`}
                         >
                           <Icon
@@ -405,7 +405,7 @@ export default function Experience() {
                               className={`text-lg font-black transition-colors ${
                                 isActive
                                   ? "text-white"
-                                  : "text-white/80"
+                                  : "text-white/90"
                               }`}
                             >
                               {step.title}
@@ -415,14 +415,14 @@ export default function Experience() {
                               className={`text-[10px] font-black tracking-[0.2em] ${
                                 isActive
                                   ? "text-wasabi"
-                                  : "text-white/25"
+                                  : "text-white/75"
                               }`}
                             >
                               {step.number}
                             </span>
                           </span>
 
-                          <span className="mt-2 block text-sm leading-6 text-white/55">
+                          <span className="mt-2 block text-sm leading-6 text-white/80">
                             {step.description}
                           </span>
                         </span>

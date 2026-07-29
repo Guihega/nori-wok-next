@@ -63,7 +63,7 @@ export default function Hero() {
             </span>
           </h1>
 
-          <p className="mt-7 max-w-xl text-base leading-8 text-ink/65 sm:text-lg dark:text-white/65">
+          <p className="mt-7 max-w-xl text-base leading-8 text-ink/75 sm:text-lg dark:text-white/75">
             Bowls, ramen, sushi y platillos al wok preparados al momento.
             Elige tus favoritos, confirma por WhatsApp y disfruta sin
             complicaciones.
@@ -107,7 +107,7 @@ export default function Hero() {
                   15–20 min
                 </strong>
 
-                <span className="text-xs text-ink/50 dark:text-white/50">
+                <span className="text-xs text-ink/70 dark:text-white/70">
                   tiempo aproximado
                 </span>
               </div>
@@ -125,7 +125,7 @@ export default function Hero() {
                   Hecho al momento
                 </strong>
 
-                <span className="text-xs text-ink/50 dark:text-white/50">
+                <span className="text-xs text-ink/70 dark:text-white/70">
                   sabor y textura real
                 </span>
               </div>
@@ -295,7 +295,7 @@ export default function Hero() {
                   Listo muy pronto
                 </p>
 
-                <p className="text-xs text-ink/50 dark:text-white/50">
+                <p className="text-xs text-ink/70 dark:text-white/70">
                   recién preparado
                 </p>
               </div>
@@ -319,7 +319,7 @@ export default function Hero() {
             className="absolute bottom-[7%] left-[1%] z-30 rounded-3xl border border-white/70 bg-white/90 p-4 shadow-soft backdrop-blur-xl dark:border-white/10 dark:bg-[#17201b]/90"
           >
             <div className="flex items-center gap-3">
-              <div className="rounded-2xl bg-gold/15 px-3 py-2 text-xl font-black text-gold">
+              <div className="rounded-2xl bg-gold/25 px-3 py-2 text-xl font-black text-[#5F4100] dark:bg-gold/20 dark:text-[#FFD66B]">
                 4.9
               </div>
 
@@ -329,8 +329,9 @@ export default function Hero() {
                 </p>
 
                 <p
-                  className="text-xs tracking-[0.14em] text-gold"
-                  aria-label="Cinco estrellas"
+                  className="text-xs font-bold tracking-[0.14em] text-[#7A4A00] dark:text-[#FFD66B]"
+                  role="img"
+                  aria-label="Calificación: cinco de cinco estrellas"
                 >
                   ★★★★★
                 </p>
