@@ -1,4 +1,5 @@
 import type { MenuItem } from "@/app/types";
+import { withBasePath } from "@/app/lib/paths";
 
 export const menuItems: MenuItem[] = [
   {
@@ -6,7 +7,7 @@ export const menuItems: MenuItem[] = [
     name: "Wok Teriyaki",
     description: "Pollo, vegetales crujientes, arroz jazmín, ajonjolí y salsa teriyaki.",
     price: 149,
-    image: "/images/wok-teriyaki.svg",
+    image: withBasePath("/images/wok-teriyaki.svg"),
     imageAlt: "Wok teriyaki con pollo, arroz y vegetales",
     categories: ["wok"],
     tag: "Más pedido",
@@ -16,7 +17,7 @@ export const menuItems: MenuItem[] = [
     name: "Ramen Miso",
     description: "Caldo miso, fideos, cerdo, huevo, alga nori, cebollín y maíz.",
     price: 169,
-    image: "/images/ramen-miso.svg",
+    image: withBasePath("/images/ramen-miso.svg"),
     imageAlt: "Ramen miso con huevo, fideos y vegetales",
     categories: ["ramen"],
     tag: "Reconfortante",
@@ -26,7 +27,7 @@ export const menuItems: MenuItem[] = [
     name: "Kumo Roll",
     description: "Salmón, aguacate, pepino, queso crema y cubierta de ajonjolí.",
     price: 139,
-    image: "/images/kumo-roll.svg",
+    image: withBasePath("/images/kumo-roll.svg"),
     imageAlt: "Rollos de sushi con aguacate y salmón",
     categories: ["sushi"],
     tag: "8 piezas",
@@ -36,7 +37,7 @@ export const menuItems: MenuItem[] = [
     name: "Yakimeshi Especial",
     description: "Arroz frito, pollo, camarón, zanahoria, calabaza, huevo y soya.",
     price: 129,
-    image: "/images/yakimeshi.svg",
+    image: withBasePath("/images/yakimeshi.svg"),
     imageAlt: "Yakimeshi especial con vegetales y proteína",
     categories: ["wok"],
     tag: "Porción grande",
@@ -46,7 +47,7 @@ export const menuItems: MenuItem[] = [
     name: "Tofu Spicy Bowl",
     description: "Tofu dorado, arroz, edamame, col morada, aguacate y mayo spicy.",
     price: 139,
-    image: "/images/tofu-bowl.svg",
+    image: withBasePath("/images/tofu-bowl.svg"),
     imageAlt: "Bowl vegetariano con tofu, arroz y vegetales",
     categories: ["veggie", "wok"],
     tag: "Vegetariano",
@@ -56,7 +57,7 @@ export const menuItems: MenuItem[] = [
     name: "Nori Crunch",
     description: "Aguacate, pepino, zanahoria, topping crujiente y salsa dulce picante.",
     price: 119,
-    image: "/images/nori-crunch.svg",
+    image: withBasePath("/images/nori-crunch.svg"),
     imageAlt: "Rollos crujientes vegetarianos",
     categories: ["sushi", "veggie"],
     tag: "Sin proteína animal",

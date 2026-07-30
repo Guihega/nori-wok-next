@@ -1,0 +1,17 @@
+{
+  "name": "Nori Wok",
+  "short_name": "Nori Wok",
+  "description": "Comida oriental preparada al momento.",
+  "start_url": "/nori-wok/",
+  "scope": "/nori-wok/",
+  "display": "standalone",
+  "background_color": "#fffaf1",
+  "theme_color": "#b72025",
+  "icons": [
+    {
+      "src": "/nori-wok/icons/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

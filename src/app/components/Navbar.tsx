@@ -10,6 +10,7 @@ import { Menu, ShoppingBag, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
 import { useCart } from "@/app/context/CartContext";
+import { withBasePath } from "@/app/lib/paths";
 import ThemeToggle from "./ThemeToggle";
 
 const navItems = [
@@ -223,7 +224,7 @@ export default function Navbar() {
             aria-label="Nori Wok, volver al inicio"
           >
             <Image
-              src="/icons/logo.svg"
+              src={withBasePath("/icons/logo.svg")}
               alt=""
               width={42}
               height={42}

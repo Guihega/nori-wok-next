@@ -10,13 +10,29 @@ import Navbar from "@/app/components/Navbar";
 import ServiceHighlights from "@/app/components/ServiceHighlights";
 import Testimonials from "@/app/components/Testimonials";
 import { siteConfig } from "@/app/lib/config";
+import { withBasePath } from "@/app/lib/paths";
+
+const publicSiteUrl = new URL(
+  withBasePath("/"),
+  siteConfig.url,
+).toString();
+
+const heroImageUrl = new URL(
+  withBasePath("/images/hero-bowl.svg"),
+  siteConfig.url,
+).toString();
+
+const menuUrl = new URL(
+  "#menu",
+  publicSiteUrl,
+).toString();
 
 const restaurantSchema = {
   "@context": "https://schema.org",
   "@type": "Restaurant",
   name: siteConfig.name,
-  image: `${siteConfig.url}/images/hero-bowl.svg`,
-  url: siteConfig.url,
+  image: heroImageUrl,
+  url: publicSiteUrl,
   telephone: siteConfig.phoneDisplay,
   priceRange: "$$",
   servesCuisine: [
@@ -26,7 +42,7 @@ const restaurantSchema = {
     "Coreana",
   ],
   acceptsReservations: false,
-  menu: `${siteConfig.url}/#menu`,
+  menu: menuUrl,
   address: {
     "@type": "PostalAddress",
     streetAddress: siteConfig.address,

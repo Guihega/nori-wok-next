@@ -1,6 +1,9 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
+import {
+  motion,
+  useReducedMotion,
+} from "framer-motion";
 import {
   ArrowRight,
   ChefHat,
@@ -9,6 +12,7 @@ import {
   Timer,
 } from "lucide-react";
 import { useCart } from "@/app/context/CartContext";
+import { withBasePath } from "@/app/lib/paths";
 
 export default function Hero() {
   const reduceMotion = useReducedMotion();
@@ -49,7 +53,11 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.08 }}
             className="mb-6 inline-flex items-center gap-2 rounded-full border border-nori/10 bg-white/75 px-4 py-2 shadow-sm backdrop-blur-md dark:border-white/10 dark:bg-white/5"
           >
-            <Leaf size={15} className="text-nori dark:text-wasabi" />
+            <Leaf
+              size={15}
+              className="text-nori dark:text-wasabi"
+              aria-hidden="true"
+            />
 
             <span className="text-[11px] font-black uppercase tracking-[0.2em] text-nori dark:text-wasabi">
               Ingredientes frescos · sabor al wok
@@ -58,12 +66,13 @@ export default function Hero() {
 
           <h1 className="max-w-3xl text-[clamp(3.35rem,6.2vw,6.8rem)] font-black leading-[0.9] tracking-[-0.055em] text-ink dark:text-white">
             Sabores de Asia,
+
             <span className="mt-2 block text-chili">
               listos para tu día.
             </span>
           </h1>
 
-          <p className="mt-7 max-w-xl text-base leading-8 text-ink/75 sm:text-lg dark:text-white/75">
+          <p className="mt-7 max-w-xl text-base leading-8 text-ink/75 dark:text-white/75 sm:text-lg">
             Bowls, ramen, sushi y platillos al wok preparados al momento.
             Elige tus favoritos, confirma por WhatsApp y disfruta sin
             complicaciones.
@@ -81,6 +90,7 @@ export default function Hero() {
               <ArrowRight
                 size={19}
                 className="transition-transform duration-300 group-hover:translate-x-1"
+                aria-hidden="true"
               />
             </motion.a>
 
@@ -99,7 +109,10 @@ export default function Hero() {
           <div className="mt-10 flex max-w-xl flex-wrap items-center gap-x-6 gap-y-4 border-t border-ink/10 pt-6 dark:border-white/10">
             <div className="flex items-center gap-3">
               <span className="flex h-10 w-10 items-center justify-center rounded-full bg-chili/10 text-chili">
-                <Timer size={19} />
+                <Timer
+                  size={19}
+                  aria-hidden="true"
+                />
               </span>
 
               <div>
@@ -113,11 +126,14 @@ export default function Hero() {
               </div>
             </div>
 
-            <div className="hidden h-9 w-px bg-ink/10 sm:block dark:bg-white/10" />
+            <div className="hidden h-9 w-px bg-ink/10 dark:bg-white/10 sm:block" />
 
             <div className="flex items-center gap-3">
               <span className="flex h-10 w-10 items-center justify-center rounded-full bg-nori/10 text-nori dark:bg-wasabi/10 dark:text-wasabi">
-                <ChefHat size={19} />
+                <ChefHat
+                  size={19}
+                  aria-hidden="true"
+                />
               </span>
 
               <div>
@@ -206,7 +222,7 @@ export default function Hero() {
           {/* Vapor */}
           <motion.svg
             viewBox="0 0 180 180"
-            className="absolute left-1/2 top-[4%] z-10 h-36 w-36 -translate-x-1/2 text-ink/65 sm:h-44 sm:w-44 dark:text-white/60"
+            className="absolute left-1/2 top-[4%] z-10 h-36 w-36 -translate-x-1/2 text-ink/65 dark:text-white/60 sm:h-44 sm:w-44"
             initial={reduceMotion ? false : { opacity: 0, y: 8 }}
             animate={
               reduceMotion
@@ -248,7 +264,7 @@ export default function Hero() {
 
           {/* Bowl */}
           <motion.img
-            src="/images/hero-bowl.svg"
+            src={withBasePath("/images/hero-bowl.svg")}
             alt="Bowl oriental con arroz, vegetales y proteína"
             width="720"
             height="620"
@@ -283,11 +299,14 @@ export default function Hero() {
               ease: "easeInOut",
               delay: 0.4,
             }}
-            className="absolute right-[1%] top-[17%] z-30 hidden rounded-3xl border border-white/70 bg-white/90 p-4 shadow-soft backdrop-blur-xl sm:block dark:border-white/10 dark:bg-[#17201b]/90"
+            className="absolute right-[1%] top-[17%] z-30 hidden rounded-3xl border border-white/70 bg-white/90 p-4 shadow-soft backdrop-blur-xl dark:border-white/10 dark:bg-[#17201b]/90 sm:block"
           >
             <div className="flex items-center gap-3">
               <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-chili/10 text-chili">
-                <Timer size={20} />
+                <Timer
+                  size={20}
+                  aria-hidden="true"
+                />
               </span>
 
               <div>
@@ -340,8 +359,12 @@ export default function Hero() {
           </motion.div>
 
           {/* Sello inferior */}
-          <div className="absolute bottom-[2%] right-[8%] z-30 hidden items-center gap-2 rounded-full bg-nori px-4 py-2 text-xs font-black uppercase tracking-[0.12em] text-white shadow-lg md:flex dark:bg-wasabi dark:text-nori">
-            <Sparkles size={15} />
+          <div className="absolute bottom-[2%] right-[8%] z-30 hidden items-center gap-2 rounded-full bg-nori px-4 py-2 text-xs font-black uppercase tracking-[0.12em] text-white shadow-lg dark:bg-wasabi dark:text-nori md:flex">
+            <Sparkles
+              size={15}
+              aria-hidden="true"
+            />
+
             Sabor al wok
           </div>
         </motion.div>
