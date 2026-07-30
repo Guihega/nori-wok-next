@@ -14,6 +14,7 @@ import {
   useReducedMotion,
 } from "framer-motion";
 import { useState } from "react";
+import { withBasePath } from "@/app/lib/paths";
 
 const steps = [
   {
@@ -80,12 +81,14 @@ export default function Experience() {
           strokeWidth="6"
           strokeLinecap="round"
         />
+
         <path
           d="M104 167C69 128 139 105 105 63C84 36 121 19 116 1"
           stroke="currentColor"
           strokeWidth="6"
           strokeLinecap="round"
         />
+
         <path
           d="M169 165C138 129 197 108 169 72C147 44 182 29 179 10"
           stroke="currentColor"
@@ -120,7 +123,12 @@ export default function Experience() {
             }}
           >
             <div className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/[0.1] px-4 py-2 text-[10px] font-black uppercase tracking-[0.22em] text-white">
-              <Flame size={14} className="text-wasabi" aria-hidden="true" />
+              <Flame
+                size={14}
+                className="text-wasabi"
+                aria-hidden="true"
+              />
+
               Nuestra diferencia
             </div>
 
@@ -129,6 +137,7 @@ export default function Experience() {
               className="mt-6 max-w-3xl text-4xl font-black leading-[0.98] tracking-[-0.045em] sm:text-5xl xl:text-[3.5rem] 2xl:text-6xl"
             >
               Rápido no tiene que
+
               <span className="mt-1 block text-wasabi">
                 significar genérico.
               </span>
@@ -169,9 +178,11 @@ export default function Experience() {
               <span className="rounded-full border border-white/25 bg-white/[0.06] px-3 py-2">
                 Carta enfocada
               </span>
+
               <span className="rounded-full border border-white/25 bg-white/[0.06] px-3 py-2">
                 Atención directa
               </span>
+
               <span className="rounded-full border border-white/25 bg-white/[0.06] px-3 py-2">
                 Preparación real
               </span>
@@ -211,7 +222,7 @@ export default function Experience() {
               />
 
               <Image
-                src="/images/wok-scene.svg"
+                src={withBasePath("/images/wok-scene.svg")}
                 alt="Cocinero preparando comida oriental en un wok al fuego"
                 width={760}
                 height={650}
@@ -226,6 +237,7 @@ export default function Experience() {
                   className="text-wasabi"
                   aria-hidden="true"
                 />
+
                 Preparación visible
               </div>
 
@@ -289,13 +301,17 @@ export default function Experience() {
             >
               <div className="flex items-center gap-3">
                 <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-chili/10 text-chili">
-                  <Flame size={19} aria-hidden="true" />
+                  <Flame
+                    size={19}
+                    aria-hidden="true"
+                  />
                 </span>
 
                 <div>
                   <strong className="block text-sm font-black">
                     Hecho al fuego
                   </strong>
+
                   <span className="text-xs text-ink/75">
                     No recalentamos: cocinamos.
                   </span>
@@ -333,6 +349,7 @@ export default function Experience() {
                 {steps.map((step, index) => {
                   const Icon = step.icon;
                   const isActive = activeStep === index;
+
                   return (
                     <li key={step.number}>
                       <motion.button

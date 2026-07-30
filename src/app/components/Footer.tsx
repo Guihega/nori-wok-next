@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 
 import { siteConfig } from "@/app/lib/config";
+import { withBasePath } from "@/app/lib/paths";
 
 const whatsappUrl = `https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent(
   "Hola, quiero consultar disponibilidad y hacer un pedido.",
@@ -64,7 +65,7 @@ export default function Footer() {
               aria-label="Nori Wok, volver al inicio"
             >
               <Image
-                src="/icons/logo.svg"
+                src={withBasePath("/icons/logo.svg")}
                 alt=""
                 width={44}
                 height={44}
@@ -124,6 +125,7 @@ export default function Footer() {
                       className="h-1.5 w-1.5 rounded-full bg-white/45 transition-colors group-hover:bg-wasabi"
                       aria-hidden="true"
                     />
+
                     {link.label}
                   </a>
                 </li>
